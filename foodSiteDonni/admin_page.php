@@ -8,7 +8,7 @@ if(isset($_POST['add_product'])){
    $product_price = $_POST['product_price'];
    $product_image = $_FILES['product_image']['name'];
    $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
-   $product_image_folder = 'uploaded_img/'.$product_image;
+   $product_image_folder = 'images/'.$product_image;
 
    if(empty($product_name) || empty($product_price) || empty($product_image)){
       $message[] = 'please fill out all';
@@ -65,13 +65,13 @@ if(isset($message)){
 
    <div class="admin-product-form-container">
 
-      <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
-         <h3>add a new product</h3>
-         <input type="text" placeholder="enter product name" name="product_name" class="box">
-         <input type="number" placeholder="enter product price" name="product_price" class="box">
-         <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
-         <input type="submit" class="btn" name="add_product" value="add product">
-      </form>
+   <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+     <h3>add a new product</h3>
+     <input type="text" placeholder="enter product name" name="product_name" class="box">
+     <input type="number" placeholder="enter product price" name="product_price" class="box">
+     <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
+     <input type="submit" class="btn" name="add_product" value="add product">
+  </form>
 
    </div>
 
@@ -92,7 +92,7 @@ if(isset($message)){
          </thead>
          <?php while($row = mysqli_fetch_assoc($select)){ ?>
          <tr>
-            <td><img src="uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td>
+            <td><img src="images/<?php echo $row['image']; ?>" height="100" alt=""></td>
             <td><?php echo $row['name']; ?></td>
             <td>$<?php echo $row['price']; ?>/-</td>
             <td>

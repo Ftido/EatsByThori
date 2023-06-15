@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     console.log("works");
     
     // Redirect to index.html if the login is successful
-    if (username === "your_username" && password === "your_password") 
+    if (username === "username" && password === "password") 
     {
       window.location.href = 'admin_page.php';
     } 
