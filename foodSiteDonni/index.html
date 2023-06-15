@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Food Website Design Tutorial</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts -->
+<!-- Navigatio bar-->
+
+<header>
+
+    <section class="flex">
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i> Eats by chef torri</a>
+
+        <nav class="navbar">
+            <a class="active" href="#home">home</a>
+            <a href="#dishes">dishes</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">review</a>
+            <a href="#order">order</a>
+
+            <a href="registration.html">Register</a>
+            <a href="login.html">Login</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart" id="cartIcon"></a>
+        </div>
+
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+              <span id="closeModal" class="close">&times;</span>
+              <h2>Order</h2>
+              <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+              </div>
+              <div class="cart-total">
+                <h3>Total: <span id="totalPrice">R0.00</span></h3>
+              </div>
+              <div class="order-form">
+                <button id="orderButton">Order</button>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+
+</header>
+
+<!-- header section ends-->
+
+<!-- search form  -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section starts  -->
+
+<div class="container">
+
+    <section class="home" id="home">
+
+        <div class="swiper home-slider">
+    
+            <div class="swiper-wrapper">
+    
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span >our special dish</span>
+                        <h3>spicy noodles</h3>
+                        <p>Indulge in a fiery burst of flavors with our signature spicy noodles. Made with the perfect blend of spices and fresh ingredients, this dish will tantalize your taste buds and leave you craving for more.</p>
+                        <a href="#dishes" class="btn">order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/platter.jpeg" alt="">
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span >our special dish</span>
+                        <h3>fried chicken</h3>
+                        <p>Experience the crispy and succulent delight of our mouthwatering fried chicken. Prepared with a secret blend of herbs and spices, each bite is a perfect balance of flavors and textures.</p>
+                        <a href="#dishes" class="btn">order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/wrap.jpeg" alt="">
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span >our special dish</span>
+                        <h3>Wing meal</h3>
+                        <p>Savor the finger-licking goodness of our delectable Wing meal. These tender and juicy wings are prepared to perfection, coated in your choice of mouthwatering sauces that will make your taste buds dance with delight.</p>
+                        <a href="#dishes" class="btn">order now</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/wingsnice.jpeg" alt="">
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="swiper-pagination"></div>
+    
+        </div>
+    
+    </section>
+
+</div>
+
+<!-- home section ends -->
+
+<!-- dishes section starts  -->
+
+<div class="container">
+
+    <section class="dishes" id="dishes">
+
+        <h3 class="sub-heading"> our dishes </h3>
+        <h1 class="heading"> popular dishes </h1>
+    
+        <div class="box-container">
+    
+            <div id="bugerdish" class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="images/dish-1.png" alt="">
+                <h3>Burgers</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="price">R35.00</span>
+                <button type="submit" class="btn">add to cart</button>
+            </div>
+    
+            <div id="stripesdish" class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="images/chickenStrips.jpg" alt="">
+                <h3>Chicken Strips</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="price">R44.99</span>
+                <button type="submit" class="btn">add to cart</button>
+            </div>
+    
+            <div id="chickendish" class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="images/chickenmeal.jpg" alt="">
+                <h3>Chicken</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="price">R50.00</span>
+                <button type="submit" class="btn">add to cart</button>
+            </div>
+    
+            <div id="platterdish" class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <img src="images/finalPlatter.jpg" alt="">
+                <h3>Platters</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="price">R150.00</span>
+                <button type="submit" class="btn">add to cart</button>
+            </div>
+    
+        </div>
+    
+    </section>
+
+</div>
+
+<!-- dishes section ends -->
+
+<!-- about section starts  -->
+
+<div class="container">
+
+    <section class="about" id="about">
+
+        <h3 class="sub-heading"> about us </h3>
+        <h1 class="heading"> why choose eats? </h1>
+    
+        <div class="row">
+    
+            <div class="image">
+                <img src="images/about-img.png" alt="">
+            </div>
+    
+            <div class="content">
+                <h3>best food in the country</h3>
+                    <p>At our restaurant, we take pride in serving the best quality food in the country. Our chefs use only the finest ingredients to create delicious and mouthwatering dishes that will satisfy your taste buds.</p>
+                    <p>With a wide variety of options on our menu, you can explore a range of flavors and culinary experiences. From traditional recipes to innovative creations, we have something to cater to every palate.</p>
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span >free delivery</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span >easy payments</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-headset"></i>
+                        <span >24/7 service</span>
+                    </div>
+                </div>
+                
+            </div>
+    
+        </div>
+    
+    </section>
+
+</div>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<div class="container">
+
+    <section class="menu" id="menu">
+
+        <h3 class="sub-heading"> our menu </h3>
+        <h1 class="heading"> today's specials </h1>
+    
+        <div class="box-container">
+    
+            <div id="wingschips" class="box">
+                <div class="image">
+                    <img src="images/wingsnice.jpeg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Wings and Chips</h3>
+                    <p>Delicious chicken cooked to perfection, served with a side of your choice.</p>
+                    <button type="submit" class="btn">add to cart</button>
+                    <span class="price">R50.00</span>
+                </div>
+            </div>
+    
+    
+    
+            <div id="wings" class="box">
+                <div class="image">
+                    <img src="images/wings.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Wings</h3>
+                    <p>Flavorful chicken wings served with your choice of sauce and a side of your choice.</p>
+                    <button type="submit" class="btn">add to cart</button>
+                    <span class="price">R60.00</span>
+                </div>
+            </div>
+    
+            <div id="platter" class="box">
+                <div class="image">
+                    <img src="images/platter.jpeg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Platters</h3>
+                    <p>Indulge in our mouthwatering platters, featuring a selection of meats and accompaniments.</p>
+                    <button type="submit" class="btn">add to cart</button>
+                    <span class="price">R150.00</span>
+                </div>
+            </div>
+    
+            <div id="burger" class="box">
+                <div class="image">
+                    <img src="images/burgers.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Burgers</h3>
+                    <p>Satisfy your burger cravings with our juicy burgers, served with a side of your choice.</p>
+                    <button type="submit" class="btn">add to cart</button>
+                    <span class="price">R50.00</span>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section>
+
+</div>
+
+<!-- menu section ends -->
+
+<!-- review section starts  -->
+
+<div class="container">
+
+    <section class="review" id="review">
+
+        <h3 class="sub-heading"> customer's review </h3>
+        <h1 class="heading"> what they say </h1>
+    
+        <div class="swiper review-slider">
+    
+            <div class="swiper-wrapper">
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>This restaurant exceeded my expectations in every way. The food was top-notch, and the flavors were unique and delightful. The service was prompt and attentive, and the staff made me feel welcome throughout my visit. I highly recommend trying their signature dishes. You won't be disappointed!</p>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/pic-2.png" alt="">
+                        <div class="user-info">
+                            <h3>Tumi ratsatsi</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>I had a wonderful dining experience at this restaurant. The food was exceptional, and the presentation was artistic. The staff was friendly and knowledgeable, providing excellent recommendations. I particularly enjoyed the attention to detail in every dish. It's definitely a place worth visiting again and again!</p>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/pic-3.png" alt="">
+                        <div class="user-info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>I had a fantastic dining experience at this restaurant. The ambiance was cozy, and the staff was friendly and attentive. The menu had a great variety of dishes, and everything I ordered was absolutely delicious. The presentation of the food was also impressive. I will definitely be back again soon!</p>
+                </div>
+    
+            </div>
+
+            <div class="swiper-pagination"></div>
+    
+        </div>
+        
+    </section>
+
+</div>
+
+<!-- review section ends -->
+
+<!-- order section starts  -->
+
+<div class="container">
+
+    <section class="order" id="order">
+
+        <h3 class="sub-heading"> order now </h3>
+        <h1 class="heading"> free and fast </h1>
+    
+        <form action="">
+    
+            <div class="inputBox">
+                <div class="input">
+                    <span >your name</span>
+                    <input type="text" placeholder="enter your name">
+                </div>
+                <div class="input">
+                    <span >your number</span>
+                    <input type="number" placeholder="enter your number">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span >your order</span>
+                    <input type="text" placeholder="enter food name">
+                </div>
+                <div class="input">
+                    <span >additional food</span>
+                    <input type="test" placeholder="extra with food">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span >how musch</span>
+                    <input type="number" placeholder="how many orders">
+                </div>
+                <div class="input">
+                    <span >date and time</span>
+                    <input type="datetime-local">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span >your address</span>
+                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="input">
+                    <span >your message</span>
+                    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+    
+            <input type="submit" value="order now" class="btn">
+    
+        </form>
+    
+    </section>
+
+</div>
+
+<!-- order section ends -->
+
+<!-- footer section starts  -->
+
+<div class="container">
+
+    <section class="footer">
+
+        <div class="box-container">
+    
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">india</a>
+                <a href="#">japan</a>
+                <a href="#">russia</a>
+            </div>
+    
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">dishes</a>
+                <a href="#">about</a>
+                <a href="#">menu</a>
+                <a href="#">reivew</a>
+                <a href="#">order</a>
+            </div>
+    
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">thato@gmail.com</a>
+                <a href="#">mumbai, india - 400104</a>
+            </div>
+    
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+            </div>
+    
+        </div>
+    
+        <div class="credit"> copyright @ 2023 by <span >Thato</span> </div>
+    
+    </section>
+
+</div>
+
+<!-- footer section ends -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
